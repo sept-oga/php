@@ -3,6 +3,10 @@
   class Menu{
     public $name;
 
+    public function __construct() {
+      echo '１つのメニューが作られました';
+    }
+
     public function hello() {
       echo '私は'.$this->name.'です';
     }
