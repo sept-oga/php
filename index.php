@@ -3,8 +3,8 @@
   class Menu{
     public $name;
 
-    public function __construct() {
-      echo '１つのメニューが作られました';
+    public function __construct($name) {
+      $this->name = $name;
     }
 
     public function hello() {
@@ -12,13 +12,10 @@
     }
   }
 
-  $curry = new Menu();
-  $pasta = new Menu();
-  $curry -> name = 'CURRY';
-  $pasta -> name = 'PASTA';
-
-  $curry->hello();
-  echo '<br>';
-  $pasta->hello();
+  $curry = new Menu('CURRY');
+  $pasta = new Menu('PASTA');
 
 ?>
+
+<p><?php echo $curry -> name ?></p>
+<p><?php echo $pasta -> name ?></p>
